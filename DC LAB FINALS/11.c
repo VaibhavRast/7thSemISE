@@ -25,7 +25,7 @@ void main(int argc, char *argv[])
     {
         //Divide Work 4 send to each slave and 3 receive statements from slave
         nworkers=size-1;
-        rows=N/nworkers;
+        avgrows=N/nworkers;
         extra=N%nworkers;
         offset=0;
 
