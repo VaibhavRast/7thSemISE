@@ -1,12 +1,18 @@
 library(rCBA)
 library(arules)
 
+df <- read_csv("C:/Users/Vaibhav Rastogi/Downloads/Grocery.csv")
+df<-as(df,"transactions")
+
+
+rules<-rCBA::fpgrowth(df,consequent = "Item5",support = 0.4,confidence = 0.6)
+inspect(rules)
+prune<-rCBA::pruning(df,rules)
+inspect(prune)
+
+rules
+rules1<-setdiff(prune,rules)
+inspect(rules1)
+
 data("Adult")
-head(Adult)
-rules<- rCBA::fpgrowth(Adult,support = 0.01,confidence = 0.2,consequent = "income")
-inspect(rules[1:10])
-inspect(Groceries[1:10])
-plot(rules,method = "graph",max=10)
-
-
-prunedRules <- rCBA::pruning(Adult, rules, method="m2cba", parallel=FALSE)
+inspect(Adult[1:10])
