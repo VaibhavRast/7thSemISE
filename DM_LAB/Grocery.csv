@@ -1,0 +1,10 @@
+Item1,Item2,Item3,Item4,Item5
+onion,bread,beer,apple,butter
+onion,bread,beer,apple,NULL
+bread,NULL,grapes,apple,NULL
+onion,NULL,beer,apple,butter
+bread,grapes,NULL,apple,butter
+banana,bread,diaper,apple,butter
+melon,bread,beer,apple,butter
+grapes,bread,beer,apple,butter
+watermelon,diaper,beer,apple,butter
